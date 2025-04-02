@@ -1,7 +1,5 @@
 import { url } from "@/lib/utils";
 
-export const dynamic = "force-static";
-
 export async function GET() {
   const res = await fetch(url("/form.json"), {
     headers: {
