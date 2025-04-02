@@ -3,13 +3,27 @@ import { Form } from "@/lib/types";
 import { cn, url } from "@/lib/utils";
 import { ViewComponent } from "./view";
 
+async function fetchFormData(): Promise<Form | null> {
+  try {
+    const formData = await fetch(url("/api/form"), { cache: "no-store" }); // no-store ensures fresh data
+    if (!formData.ok) {
+      return null;
+    }
+    const response = await formData.json();
+    return response.data.form as Form;
+  } catch (error) {
+    console.error("Error fetching form data:", error);
+    return null;
+  }
+}
+
 export default async function Home() {
-  const formData = await fetch(url("/api/form"));
-  const response = await formData.json();
-  if (!formData.ok) {
+  const formData = await fetchFormData();
+
+  if (!formData) {
     return (
-      <div className={cn(" w-screen min-h-screen grid place-items-center")}>
-        <Card className="w-[90%] ">
+      <div className={cn("w-screen min-h-screen grid place-items-center")}>
+        <Card className="w-[90%]">
           <CardContent>
             <p>Failed to fetch form data</p>
           </CardContent>
@@ -18,6 +32,5 @@ export default async function Home() {
     );
   }
 
-  if (response.data.form)
-    return <ViewComponent data={response.data.form as Form} />;
+  return <ViewComponent data={formData} />;
 }
