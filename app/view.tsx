@@ -27,7 +27,7 @@ export const ViewComponent: React.FC<{ data: FormType }> = ({ data }) => {
     <div className={cn(" w-screen min-h-screen grid place-items-center")}>
       <Card className="w-[90%] ">
         <CardHeader>
-          <CardTitle>{data.title}</CardTitle>
+          <CardTitle data-testid="title">{data.title}</CardTitle>
         </CardHeader>
         <CardContent>
           <Form {...form}>

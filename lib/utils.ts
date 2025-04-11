@@ -6,6 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function url(path: string) {
+  console.log({ path, base: process.env.API_BASE_URL });
   const generateURL = new URL(path, process.env.API_BASE_URL);
   return generateURL.toString();
 }
