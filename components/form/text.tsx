@@ -26,7 +26,7 @@ export const TextField = (input: { field: Field }) => {
         max: field.validationRules.max,
       }}
       render={({ field: renderField }) => (
-        <FormItem>
+        <FormItem data-testid="text-field">
           <FormLabel>{field.label}</FormLabel>
           <FormControl>
             <Input

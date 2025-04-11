@@ -26,7 +26,7 @@ export const EmailField = (input: { field: Field }) => {
         max: field.validationRules.max,
       }}
       render={({ field: renderField }) => (
-        <FormItem>
+        <FormItem data-testid="email-field">
           <FormLabel>{field.label}</FormLabel>
           <FormControl>
             <Input

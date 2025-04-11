@@ -1,6 +1,6 @@
+import Page from "@/app/page";
 import { render, screen, waitFor } from "@testing-library/react";
 import { expect, test, vi } from "vitest";
-import Page from "@/app/page";
 
 vi.mock("@/lib/server-functions", () => ({
   fetchFormData: vi.fn(() => Promise.resolve(null)),
@@ -14,5 +14,5 @@ test("renders async page content and returns failed", async () => {
   });
   render(ui);
 
-  expect(screen.getByText("helo")).toBeDefined();
+  expect(screen.getByText("Failed to fetch form data")).toBeDefined();
 });

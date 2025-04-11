@@ -17,8 +17,12 @@ export const CheckboxField = (input: { field: Field }) => {
     <FormField
       control={control}
       name={field.name}
+      data-testid="checkbox-field"
       render={({ field: renderField }) => (
-        <FormItem className="flex justify-end items-center flex-row-reverse space-x-2">
+        <FormItem
+          data-testid="checkbox-field"
+          className="flex justify-end items-center flex-row-reverse space-x-2"
+        >
           <FormLabel>{field.label}</FormLabel>
           <FormControl>
             <Checkbox

@@ -19,7 +19,7 @@ export const RadioField = (input: { field: Field }) => {
       control={control}
       name={field.name}
       render={({ field: renderField }) => (
-        <FormItem>
+        <FormItem data-testid="radio-field">
           <FormLabel>{field.label}</FormLabel>
           <FormControl>
             <RadioGroup

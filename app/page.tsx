@@ -11,7 +11,7 @@ export default async function Home() {
       <div className={cn("w-screen min-h-screen grid place-items-center")}>
         <Card className="w-[90%]">
           <CardContent>
-            <p>helo</p>
+            <p>Failed to fetch form data</p>
           </CardContent>
         </Card>
       </div>
