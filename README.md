@@ -47,15 +47,15 @@ Each item in the `fields` array represents a form field.
 
 ### Field Properties
 
-| Key               | Type     | Description                                                                              |
-| ----------------- | -------- | ---------------------------------------------------------------------------------------- |
-| `label`           | `string` | Text shown to the user as the field’s label.                                             |
-| `type`            | `string` | Type of input (`text`, `email`, `number`, etc). See [Supported Types](#supported-types). |
-| `name`            | `string` | Unique identifier; also used as the key in the submission payload.                       |
-| `defaultValue`    | `any`    | The default value shown in the field (based on type).                                    |
-| `validationRules` | `object` | Validation config. See [Validation](#validationrules).                                   |
-| `metadata`        | `object` | UI hints like placeholders and tooltips. See [Metadata](#metadata).                      |
-| `options`         | `array`  | Required for `radio`, `select`, etc. See [Options](#options).                            |
+| Key               | Type     | Description                                                                                  |
+| ----------------- | -------- | -------------------------------------------------------------------------------------------- |
+| `label`           | `string` | Text shown to the user as the field’s label.                                                 |
+| `type`            | `string` | Type of input (`text`, `email`, `number`, etc). See [Supported Types](#-supported-types).    |
+| `name`            | `string` | Unique identifier; also used as the key in the submission payload.                           |
+| `defaultValue`    | `any`    | The default value shown in the field (based on type).                                        |
+| `validationRules` | `object` | Validation config. See [Validation](#%EF%B8%8F-validationrules).                             |
+| `metadata`        | `object` | UI hints like placeholders and tooltips. See [Metadata](#-metadata).                         |
+| `options`         | `array`  | Required for `radio`, `select`, etc. See [Options](#-options-for-radios-and-future-selects). |
 
 ---
 
